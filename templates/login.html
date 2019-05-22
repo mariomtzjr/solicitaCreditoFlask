@@ -6,7 +6,7 @@
 
     <title>Creze Test with Flask</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}" type="text/css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
@@ -21,21 +21,51 @@
         <div class="row">
             <div class="jsx-3848274220 column is-half-desktop is-8-tablet is-12-mobile form-container">
                 <img src="{{ url_for('static', filename='img/logocreze.png') }}" class="jsx-3848274220 header-icon">
-                <h1 class="jsx-3848274220 has-text-centered mar-bottom">Ingresa a tu cuenta</h1><form class="jsx-3931549017 columns is-multiline"><div class="jsx-3931549017 column is-12"><label for="email" class="jsx-3931549017">Correo</label><div class="container-input"><input type="email" required="" name="email" placeholder="Ingresa el correo electrónico" value="" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;"><div class="errorMessage">Correo inválido</div></div></div><div class="jsx-3931549017 column is-12"><label for="password" class="jsx-3931549017 password">Contraseña <a class="jsx-3931549017" href="/forgot">¿Olvidaste tu contraseña?</a></label><div class="container-input"><input type="password" required="" name="password" placeholder="Ingresa la contraseña" value="" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;"><div class="errorMessage">Contraseña inválida</div></div></div><div class="jsx-3931549017 column is-12"><div><button class="primary send">Ingresar</button><style>
-          button {
-            background: #5fbd68 !important;
-            color: #fff;
-            border: solid 1px #5fbd68 !important;
-            padding-left: 18px;
-            padding-right: 18px;
-          }
-          button:hover {
-            opacity: .8;
-          }
-          .borderRadius {
-            border-radius: 25px;
-          }
-      </style></div></div><hr class="jsx-3931549017"><div class="jsx-3931549017 column is-12 forgot"><small class="jsx-3931549017">¿Nuevo en creze? </small><a class="jsx-3931549017" href="https://application-beta.creze.com/?show=applynow ">Crear cuenta</a></div></form></div>
+                <h1 class="jsx-3848274220 has-text-centered mar-bottom">Ingresa a tu cuenta</h1>
+                <form class="jsx-3931549017 columns is-multiline">
+                    <div class="jsx-3931549017 column is-12">
+                        <label for="email" class="jsx-3931549017">Correo</label>
+                        <div class="container-input">
+                            <input type="email" required="" name="email" placeholder="Ingresa el correo electrónico" value="" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+                            <div class="errorMessage">Correo inválido</div>
+                        </div>
+                    </div>
+
+                    <div class="jsx-3931549017 column is-12">
+                        <label for="password" class="jsx-3931549017 password">Contraseña <a class="jsx-3931549017" href="/forgot">¿Olvidaste tu contraseña?</a></label>
+                        <div class="container-input">
+                            <input type="password" required="" name="password" placeholder="Ingresa la contraseña" value="" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+                            <div class="errorMessage">Contraseña inválida</div>
+                        </div>
+                    </div>
+
+                    <div class="jsx-3931549017 column is-12">
+                        <div>
+                            <button class="primary send">Ingresar</button>
+                                <style>
+                                      button {
+                                        background: #5fbd68 !important;
+                                        color: #fff;
+                                        border: solid 1px #5fbd68 !important;
+                                        padding-left: 18px;
+                                        padding-right: 18px;
+                                      }
+                                      button:hover {
+                                        opacity: .8;
+                                      }
+                                      .borderRadius {
+                                        border-radius: 25px;
+                                      }
+                                </style>
+                        </div>
+                    </div>
+                      <hr class="jsx-3931549017">
+                      <div class="jsx-3931549017 column is-12 forgot">
+                        <small class="jsx-3931549017">¿Nuevo en creze? </small>
+                        <a class="jsx-3931549017" href="https://application-beta.creze.com/?show=applynow ">Crear cuenta</a>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 
