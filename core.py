@@ -23,8 +23,9 @@ def index():
 
 @app.route('/login', methods=['POST'])
 def admin_login():
-    if request.form['password'] == 'password' and request.form['username'] == 'admin':
+    if request.form['password'] == 'password' and request.form['username'] == 'admin@django.com':
         session['logged_in'] = True
+        return index()
     else:
         flash('¡Usuario/Contraseña incorrectos!')
         return index()

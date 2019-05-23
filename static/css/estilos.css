@@ -2,6 +2,48 @@
 box-sizing: border-box;
 }
 
-body div.container div.row {
-    justify-content: center;
+h1 {
+    font-size: 2.8rem;
+    color: #172551;
 }
+
+body .container .row {
+    justify-content: center;
+    margin: 20vh 10px;
+}
+
+body .container {
+    height: 100vh;
+}
+
+button {
+    background: #5fbd68 !important;
+    color: #fff;
+    border: solid 1px #5fbd68 !important;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+input[type='submit'], button.primary, button.primary {
+
+}
+
+form {
+    width: 280px;
+    margin: 0px;
+}
+
+.errorMessage{
+    display: none;
+}
+
+button.send {
+    background: #5fbd68 !important;
+    color: #fff;
+    border: solid 1px #5fbd68 !important;
+    width: 100% !important;
+    height: 40px !important;
+    border-radius: 4px;
+}
+
+
