@@ -14,6 +14,20 @@ body .container .row {
 
 body .container {
     height: 100vh;
+    max-width: 100%;
+    padding: 0;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+img {
+    width: 150px;
+    height: 37px;
 }
 
 button {
@@ -31,6 +45,26 @@ input[type='submit'], button.primary, button.primary {
 form {
     width: 280px;
     margin: 0px;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.navigation-navbar {
+    background-color: #1b2e5c;
+    color: #F1F7FF;
+    border: none;
+    box-shadow: none;
+}
+
+navbar-nav {
+    displa: flex;
+
 }
 
 .errorMessage{

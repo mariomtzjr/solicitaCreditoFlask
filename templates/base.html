@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>{% block title%}{% endblock %}</title>
+
+    {% block styles %}
+         <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% endblock %}
+</head>
+<body>
+        <div class="container">
+            <nav class="navbar navigation-navbar navbar-wrapper navbar-default navbar-fixed-top">
+                    <a class="navbar-brand" href="#"><img alt="logo" data-src="creze.svg" src="https://cdn.creze.com/assets/creze.svg?v1.14.1-b6a6c96"></a>
+            </nav>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Acerca de creze<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Preguntas frecuentes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Simula tu crédito</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                  </li>
+                  <li id="applynow">
+                        <a href="" data-target="#regModal" data-toggle="modal">
+                            <span class="apply-now-btn2">Aplica ahora</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="login" href="https://application.creze.com/signin">
+                            <span class="login-btn">Iniciar sesión</span>
+                        </a>
+                    </li>
+
+                </ul>
+              </div>
+        </div>
+    {% block content %}
+
+    {% endblock%}
+
+</body>
+</html>
