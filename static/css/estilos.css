@@ -1,5 +1,5 @@
 * {
-box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -10,12 +10,12 @@ h1 {
 body .container .row {
     justify-content: center;
     margin: 20vh 10px;
+    font-size: 16px;
+    line-height: 28px;
 }
 
 body .container {
-    height: 100vh;
-    max-width: 100%;
-    padding: 0;
+
 }
 
 .container {
@@ -60,15 +60,39 @@ form {
     color: #F1F7FF;
     border: none;
     box-shadow: none;
+    align-items: center;
+    padding: 0;
 }
 
-navbar-nav {
+.navbar-collapse {
     displa: flex;
+    background-color: #1b2e5c;
 
+}
+
+.navbar-nav {
+    justify-content: space-around;
 }
 
 .errorMessage{
     display: none;
+}
+
+.apply-now-btn2 {
+    padding: 7px;
+    border: 2px solid #7cb854;
+    background: #7cb854;
+    transition: all 0.4s;
+    color: white !important;
+    border-radius: 100px;
+    font-size: 15px;
+}
+.nav-link {
+    color: #fff;
+}
+
+.login-btn{
+    color: #fff;
 }
 
 button.send {
@@ -79,5 +103,3 @@ button.send {
     height: 40px !important;
     border-radius: 4px;
 }
-
-

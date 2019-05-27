@@ -17,7 +17,7 @@ from config import DevelopmentConfig
 
 app = Flask(__name__)
 app.config.from_object(DevelopmentConfig)
-csrf = CsrfProtect()
+csrf = CsrfProtect(app)
 
 
 @app.route("/")
@@ -49,5 +49,5 @@ def listaCreditos():
 
 
 if __name__ == '__main__':
-    csrf.init_app(app)
+    # csrf.init_app(app)
     app.run(host="0.0.0.0", port=8000)
