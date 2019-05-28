@@ -8,7 +8,7 @@ from flask import (
     abort
 )
 
-from flask_wtf import CsrfProtect
+from flask_wtf import CSRFProtect
 from flask_sqlalchemy import SQLAlchemy
 
 import forms
@@ -16,13 +16,11 @@ import forms
 from config import DevelopmentConfig
 from models import Solicitud
 from models import Cliente
+from models import db
 
 app = Flask(__name__)
 app.config.from_object(DevelopmentConfig)
-csrf = CsrfProtect()
-
-db = SQLAlchemy()
-
+csrf = CSRFProtect()
 
 @app.route("/")
 def index():
