@@ -1,9 +1,14 @@
 from wtforms import Form
-from wtforms import StringField
+from wtforms import StringField, IntegerField, FloatField
 from wtforms.fields.html5 import EmailField
 
 
 class ClienteForm(Form):
-    cod_cli = StringField('cod_cli')
     username = StringField('username')
     email = EmailField('Correo electronico')
+
+
+class SolicitudForm(Form):
+    nombre = StringField('Nombre')
+    cantidad = FloatField('Cantidad')
+    plazo = IntegerField('Plazo')

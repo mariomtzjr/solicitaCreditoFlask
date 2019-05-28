@@ -7,4 +7,5 @@ class Config(object):
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = 'mysql://root:password@localhost/flask'
+    CSRF_ENABLED = True
+    SQLALCHEMY_DATABASE_URI = 'postgresql://root:password@localhost/flask'
