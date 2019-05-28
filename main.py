@@ -59,11 +59,14 @@ def creaCliente():
             password=clienteForm.password.data,
         )
 
-    db.session.add(cliente)
-    db.session.commit()
+        db.session.add(cliente)
+        db.session.commit()
 
-    success_message = "Usuario nuevo creado existosamente"
-    flash(success_message)
+        success_message = "Usuario nuevo creado existosamente"
+        flash(success_message)
+
+        return redirect(url_for('login'))
+    return render_template('register.html', form=clienteForm)
 
 
 @app.route("/solicitud", methods=['GET', 'POST'])
@@ -77,9 +80,14 @@ def solicitud():
             cantidad=solicitudForm.cantidad.data
         )
 
-    db.session.add(solicitud)
-    db.session.commit()
+        db.session.add(solicitud)
+        db.session.commit()
 
+        success_message = "Tu solicitud se ha creado existosamente"
+        flash(success_message)
+
+        return redirect(url_for('index'))
+    return render_template('solicitud.html', form=solicitudForm)
 
 if __name__ == '__main__':
     csrf.init_app(app)

@@ -6,6 +6,7 @@ from wtforms.fields.html5 import EmailField
 class ClienteForm(Form):
     username = StringField('username')
     email = EmailField('Correo electronico')
+    password = StringField('Password')
 
 
 class SolicitudForm(Form):
