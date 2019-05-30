@@ -1,0 +1,44 @@
+version: "2"
+
+services:
+  web:
+    build:
+        context: ./
+        dockerfile: ./web/dev.dockerfile
+    env_file:
+        - ./web/.env
+    ports:
+        - "8000:8000"
+    links:
+        - postgres
+    volumes:
+        - ./:/code
+    command: sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    expose:
+        - 8000
+    depends_on:
+        - postgres
+
+  postgres:
+    image: postgres:9.6-alpine
+    environment:
+        POSTGRES_USER: django
+        POSTGRES_PASSWORD: django
+    volumes:
+        - 'postgres:/var/lib/postgresql/data'
+    ports:
+        - '5433:5432'
+
+  pgadmin:
+    image: fenglc/pgadmin4
+    links:
+        - postgres:postgres
+    environment:
+        DEFAULT_USER: django
+        DEFAULT_PASSWORD: django
+    ports:
+        - "5050:5050"
+    restart: unless-stopped
+
+volumes:
+    postgres:
