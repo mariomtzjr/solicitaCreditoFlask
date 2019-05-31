@@ -12,6 +12,7 @@ from flask_wtf import CsrfProtect
 from flask_sqlalchemy import SQLAlchemy
 
 import forms
+import json
 
 from config import DevelopmentConfig
 from models import Solicitud
@@ -85,4 +86,8 @@ def solicitud():
 
 if __name__ == '__main__':
     csrf.init_app(app)
+
+    db.init_app(app)
+    with app.app_context():
+        db.create_all()
     app.run(host="0.0.0.0", port=8000)
