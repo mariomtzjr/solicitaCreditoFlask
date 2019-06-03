@@ -2,6 +2,14 @@
     font-family: 'Roboto', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:link{
+    text-decoration: none;
+}
+
 h1 {
     font-size: 2.8rem;
     color: #172551;
@@ -43,8 +51,10 @@ input[type='submit'], button.primary, button.primary {
 }
 
 form {
-    width: 280px;
+    width: 330px;
     margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .navbar-brand {
