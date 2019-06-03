@@ -21,6 +21,9 @@ from models import db
 
 app = Flask(__name__)
 app.config.from_object(DevelopmentConfig)
+
+db = SQLAlchemy(app)
+
 csrf = CSRFProtect()
 
 @app.route("/")
