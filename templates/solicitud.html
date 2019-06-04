@@ -1,19 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Solicitud de crédito</h1>
-    <form>
+    <h1 class="text-center mb-4 mt-4">Solicitud de crédito</h1>
+    <form class="mx-auto">
         <div class="form-group">
-            <label for="exampleInputEmail1">Nombre</label>
-            {{ form.nombre }}
+            <label class="w-25" for="exampleInputEmail1">Nombre</label>
+            <span class="ml-4">{{ form.nombre }}</span>
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1">Cantidad</label>
-            {{ form.cantidad }}
+            <label style="width: 70px;" for="exampleInputEmail1">Cantidad</label>
+            <span class="ml-4">{{ form.cantidad }}</span>
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Plazo</label>
-            {{ form.plazo }}
+            <label class="w-25" for="exampleInputPassword1">Plazo</label>
+            <span class="ml-4">{{ form.plazo }}</span>
         </div>
         <button type="submit" class="btn btn-primary">Solicitar</button>
     </form>
